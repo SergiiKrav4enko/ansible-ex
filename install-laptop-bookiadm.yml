@@ -1,0 +1,72 @@
+- hosts: test-virt
+  tasks:
+ 
+#########
+    - name: Upgrade System
+      become: yes
+      command: dnf -y upgrade
+ 
+#########
+    - name: Install Aeskulap
+      become: yes
+      command: dnf -y install aeskulap
+ 
+#########
+    - name: Install Chromium
+      become: yes
+      command: dnf -y install chromium
+ 
+#########
+    - name: Copy Zoiper3
+      become: yes
+      copy:
+	src: /home/bookiadm/install/zoiper.run
+        dest: /home/bookiadm/install/zoiper.run
+ 
+#########
+    - name: Copy Chrome
+      become: yes
+      copy:
+        src: /home/bookiadm/install/chrome.rpm
+        dest: /home/bookiadm/install/chrome.rpm
+ 
+#########
+    - name: Install Chrome
+      become: yes
+      copy:
+        src: /home/bookiadm/install/chrome.rpm
+        dest: /home/bookiadm/install/chrome.rpm
+ 
+#########
+    - name: Install Chrome
+      become: yes
+      command dnf -y install /home/bookimed/install/chrome.rpm
+ 
+#########
+    - name: Copy Skype
+      become: yes
+      copy:
+        src: /home/bookiadm/install/skype.rpm
+        dest: /home/bookiadm/install/skype.rpm
+ 
+#########
+    - name: Install Skype
+      become: yes
+      command dnf -y install /home/bookimed/install/skype.rpm
+ 
+#########
+    - name: Copy Viber
+      become: yes
+      copy:
+        src: /home/bookiadm/install/viber.rpm
+        dest: /home/bookiadm/install/viber.rpm
+ 
+#########
+    - name: Install Viber
+      become: yes
+      command dnf -y install /home/bookimed/install/viber.rpm
+ 
+#########
+#    - name: Install Zoiper3
+#      become: yes
+#      command: ./zoiper.run
